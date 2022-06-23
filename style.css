@@ -1,0 +1,320 @@
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  height: 2000px; /*тест*/
+}
+
+/*Change cursor type*/
+
+.header__button:hover,
+.menu__link:hover,
+.team__photo:hover,
+.social-list__button:hover,
+.team__contacts__button:hover {
+  cursor: url("img/cursor.png"),auto;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  z-index: 1;
+  display: flex;
+  align-content: center;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.header .container {                    
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {}
+
+.logo {
+  width: 170px;
+  height: 60px;
+}
+
+.header__menu {
+  font-size: 20px;
+}
+
+.menu {
+  font-style: normal;                   
+  font-weight: 600;
+  color: #3C3C3C;;
+}
+
+.menu__list {
+}
+
+.menu__item {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.menu__link {}
+
+.menu__link:hover {
+  color: #18B5DC;
+}
+
+.header__button {
+  width: 130px;
+  height: 42px;
+  background: none;
+  border: 1px solid #3C3C3C;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #3C3C3C;
+  padding: 10px 19.5px;
+}
+
+.header__button:hover {
+  background: #18B5DC;
+  border: 1px solid #18B5DC;
+  color: #FFFFFF;
+}
+
+.team {
+  padding-top: 80px;
+  background: #F6F6F6;
+}
+
+.team .container {
+  padding: 150px 0;
+  align-items: center;
+}
+
+.team__title {}
+
+.team__title h2 {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 41px;
+  text-align: center;
+  letter-spacing: 4px;
+  color: #3C3C3C;
+}
+
+.team__divider {
+  width: 45px;
+  height: 4px;
+  background: #DDDBDB;
+  margin: 20px auto 40px;
+}
+
+.team__text {
+  width: 570px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #3C3C3C;
+  margin: 0 auto;
+}
+
+.team__profiles {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.team__member {}
+
+.team__card {
+  background-color: transparent;
+  width: 270px;
+  height: 270px;
+  perspective: 1000px;
+}
+
+.team__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.team__card:hover .team__inner {
+  transform: rotateY(180deg)
+}
+
+.team__photo, .team__contacts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.team__photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team__contacts {
+  background-color: #18B5DC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+
+.team__contacts__social-list {
+  display: flex;
+}
+
+.team__contacts__button {
+  width: 42px;
+  height: 42px;
+  background-color: #5DCBE6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.team__contacts__button:hover {
+  background-color: white;
+}
+
+.team__contacts__button:nth-child(1) {
+  background-image: url("img/social-list__icon/twitter-icon-white.svg");
+}
+
+.team__contacts__button:nth-child(1):hover {
+  background-image: url("img/social-list__icon/twitter-icon.svg");
+}
+
+.team__contacts__button:nth-child(2) {
+  background-image: url("img/social-list__icon/facebook-icon-white.svg");
+}
+
+.team__contacts__button:nth-child(2):hover {
+  background-image: url("img/social-list__icon/facebook-icon.svg");
+}
+
+.team__contacts__button:nth-child(3) {
+  background-image: url("img/social-list__icon/instagram-icon-white.svg");
+}
+
+.team__contacts__button:nth-child(3):hover {
+  background-image: url("img/social-list__icon/instagram-icon.svg");
+}
+
+
+
+
+.team__name {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #282528;
+  margin-top: 20px;
+}
+
+.team__role {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  color: #646464;
+
+}
+
+.footer {}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__logo {
+  margin: 40px auto 28px;
+}
+
+.footer__menu {
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0 0 28px 0;
+} 
+
+.social-list {
+  display: flex;
+}
+
+.social-list__button {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #18B5DC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.social-list__button:hover {
+  background-color: #18B5DC;
+}
+
+.social-list__button:nth-child(1) {
+  background-image: url("img/social-list__icon/twitter-icon.svg");
+}
+
+.social-list__button:nth-child(1):hover {
+  background-image: url("img/social-list__icon/twitter-icon-white.svg");
+}
+
+.social-list__button:nth-child(2) {
+  background-image: url("img/social-list__icon/facebook-icon.svg");
+}
+
+.social-list__button:nth-child(2):hover {
+  background-image: url("img/social-list__icon/facebook-icon-white.svg");
+}
+
+.social-list__button:nth-child(3) {
+  background-image: url("img/social-list__icon/instagram-icon.svg");
+}
+
+.social-list__button:nth-child(3):hover {
+  background-image: url("img/social-list__icon/instagram-icon-white.svg");
+}
+
+.social-list__button:nth-child(4) {
+  background-image: url("img/social-list__icon/linkedin-icon.svg");
+}
+
+.social-list__button:nth-child(4):hover {
+  background-image: url("img/social-list__icon/linkedin-icon-white.svg");
+}
+
+.social-list__button:nth-child(5) {
+  background-image: url("img/social-list__icon/telegram-icon.svg");
+}
+
+.social-list__button:nth-child(5):hover {
+  background-image: url("img/social-list__icon/telegram-icon-white.svg");
+}
+
+
+/*.social-list__icon {} - спрятал логотипы и заменил их на SVG */ 
