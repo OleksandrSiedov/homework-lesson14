@@ -11,12 +11,17 @@ body {
 .header__button:hover,
 .menu__link:hover,
 .team__photo:hover,
-.social-list__button:hover {
+.social-list__button:hover,
+.team__contacts__button:hover {
   cursor: url("img/cursor.png"),auto;
 }
 
 .header {
+  position: fixed;
+  width: 100%;
   height: 80px;
+  background-color: white;
+  z-index: 1;
   display: flex;
   align-content: center;
 }
@@ -81,8 +86,8 @@ body {
   color: #FFFFFF;
 }
 
-
 .team {
+  padding-top: 80px;
   background: #F6F6F6;
 }
 
@@ -100,7 +105,6 @@ body {
   text-align: center;
   letter-spacing: 4px;
   color: #3C3C3C;
-  
 }
 
 .team__divider {
@@ -129,10 +133,93 @@ body {
 
 .team__member {}
 
-.team__photo {
+.team__card {
+  background-color: transparent;
   width: 270px;
   height: 270px;
+  perspective: 1000px;
 }
+
+.team__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.team__card:hover .team__inner {
+  transform: rotateY(180deg)
+}
+
+.team__photo, .team__contacts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.team__photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team__contacts {
+  background-color: #18B5DC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+
+.team__contacts__social-list {
+  display: flex;
+}
+
+.team__contacts__button {
+  width: 42px;
+  height: 42px;
+  background-color: #5DCBE6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.team__contacts__button:hover {
+  background-color: white;
+}
+
+.team__contacts__button:nth-child(1) {
+  background-image: url("img/social-list__icon/twitter-icon-white.svg");
+}
+
+.team__contacts__button:nth-child(1):hover {
+  background-image: url("img/social-list__icon/twitter-icon.svg");
+}
+
+.team__contacts__button:nth-child(2) {
+  background-image: url("img/social-list__icon/facebook-icon-white.svg");
+}
+
+.team__contacts__button:nth-child(2):hover {
+  background-image: url("img/social-list__icon/facebook-icon.svg");
+}
+
+.team__contacts__button:nth-child(3) {
+  background-image: url("img/social-list__icon/instagram-icon-white.svg");
+}
+
+.team__contacts__button:nth-child(3):hover {
+  background-image: url("img/social-list__icon/instagram-icon.svg");
+}
+
+
+
 
 .team__name {
   font-style: normal;
@@ -167,12 +254,11 @@ body {
 .footer__menu {
   font-size: 18px;
   line-height: 22px;
+  margin: 0 0 28px 0;
 } 
-
 
 .social-list {
   display: flex;
-  margin: 28px 0px 0px 0px;
 }
 
 .social-list__button {
@@ -183,13 +269,52 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 5px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-
-.social-list__button:first-child:hover {
+.social-list__button:hover {
   background-color: #18B5DC;
-  background-image: url("img/social-list__icon/twitter-icon_white.svg");
-} 
-
-.social-list__icon {
-
 }
+
+.social-list__button:nth-child(1) {
+  background-image: url("img/social-list__icon/twitter-icon.svg");
+}
+
+.social-list__button:nth-child(1):hover {
+  background-image: url("img/social-list__icon/twitter-icon-white.svg");
+}
+
+.social-list__button:nth-child(2) {
+  background-image: url("img/social-list__icon/facebook-icon.svg");
+}
+
+.social-list__button:nth-child(2):hover {
+  background-image: url("img/social-list__icon/facebook-icon-white.svg");
+}
+
+.social-list__button:nth-child(3) {
+  background-image: url("img/social-list__icon/instagram-icon.svg");
+}
+
+.social-list__button:nth-child(3):hover {
+  background-image: url("img/social-list__icon/instagram-icon-white.svg");
+}
+
+.social-list__button:nth-child(4) {
+  background-image: url("img/social-list__icon/linkedin-icon.svg");
+}
+
+.social-list__button:nth-child(4):hover {
+  background-image: url("img/social-list__icon/linkedin-icon-white.svg");
+}
+
+.social-list__button:nth-child(5) {
+  background-image: url("img/social-list__icon/telegram-icon.svg");
+}
+
+.social-list__button:nth-child(5):hover {
+  background-image: url("img/social-list__icon/telegram-icon-white.svg");
+}
+
+
+/*.social-list__icon {} - спрятал логотипы и заменил их на SVG */ 
